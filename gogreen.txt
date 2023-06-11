@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sustainability Performance Indicators</title>
+</head>
+<body>
+  <h1>Sustainability Performance Indicators</h1>
+  
+  <h2>Choose an Industry:</h2>
+  <select id="optionDropdown" onchange="showIndicators()">
+    <option value="">Select an option</option>
+    <option value="a">Mining</option>
+    <option value="b">Manufacturing</option>
+    <option value="c">Energy production</option>
+    <option value="d">Construction</option>
+    <option value="e">Transportation</option>
+    <option value="f">Agriculture</option>
+    <option value="g">Chemical industry</option>
+    <option value="h">Waste management</option>
+    <option value="i">Information technology (IT) industry</option>
+    <option value="j">Biotechnology</option>
+  </select>
+
+
+
+  <div id="indicatorForm" style="display: none;">
+    <h2>Environmental Sustainability Performance Indicators:</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Indicator</th>
+          <th>Rating (1-5)</th>
+        </tr>
+        <div><tr>
+           <td><b>Category 1: mineral resources and materials</b></td> </tr>
+          <tr>
+          <td>1.Total consumption of resources and materials and quantity of products produced</td>
+          <td>
+            <select id="rating1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>2.Utilization of mining waste</td>
+          <td>
+            <select id="rating2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </td>
+        </tr></div>
+      
+
+        <td><b>Category 2: emissions and waste</b></td> </tr>
+        <tr>
+        <td>1.Air emissions by type and total</td>
+        <td>
+          <select id="rating3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>2.Liquid waste by type and total</td>
+        <td>
+          <select id="rating4">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>3.Mining waste to be deposited by type and total (in absolute and relative units)</td>
+        <td>
+          <select id="rating5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+
+      <td><b>Category 3: energy and water</b></td> </tr>
+      <tr>
+      <td>1.Energy consumption by type and total</td>
+      <td>
+        <select id="rating6">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>2.Total industrial water consumption</td>
+      <td>
+        <select id="rating7">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>3.Percentage of water that is recycled or reused as compared to total consumption</td>
+      <td>
+        <select id="rating8">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>4.Availability of water resources at local level</td>
+      <td>
+        <select id="rating9">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+    
+
+    <td><b>Category 4: suppliers and environmental performance</b></td> </tr>
+    <tr>
+    <td>1.Environmental assessment of suppliers and contractors</td>
+    <td>
+      <select id="rating10">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>2.Initiatives to enhance environmental performance, accountability and equity</td>
+    <td>
+      <select id="rating11">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </td>
+  </tr>
+  
+
+  <td><b>Category 5: biodiversity</b></td> </tr>
+  <tr>
+  <td>1.Numbers of species included in the IUCN red list or national lists of 
+    protected species and are affected by the facility’s activities, classified by the level of 
+    extinction risk</td>
+  <td>
+    <select id="rating12">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </td>
+</tr>
+<tr>
+  <td>2.Identification and mitigation actions on biodiversity</td>
+  <td>
+    <select id="rating13">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </td>
+</tr>
+
+<td><b>Category 6: land use and rehabilitation</b></td> </tr>
+<tr>
+<td>1.Total area restored to total disruption</td>
+<td>
+  <select id="rating14">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</td>
+</tr>
+
+
+<td><b>Category 7: impact on the environment and climate change</b></td> </tr>
+<tr>
+<td>1.Global warming potential</td>
+<td>
+  <select id="rating15">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</td>
+</tr>
+<tr>
+<td>2.Number and description of environmental accidents</td>
+<td>
+  <select id="rating16">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</td>
+</tr>
+<tr>
+  <td>3.Hazard risk of utilized materials, emissions and waste</td>
+  <td>
+    <select id="rating17">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </td>
+  </tr>
+  
+
+
+<td><b>Category 8: impact on human health</b></td> </tr>
+<tr>
+<td>1.Ambient air quality of the industrial site</td>
+<td>
+  <select id="rating18">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</td>
+</tr>
+<tr>
+<td>2.Risk of failure of infrastructure</td>
+<td>
+  <select id="rating19">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+</td>
+</tr>
+
+           <h10>Multipliers:</h10><br>
+  <input type="number" id="value1" placeholder="Value 1"><br>
+  <input type="number" id="value2" placeholder="Value 2"><br>
+  <input type="number" id="value3" placeholder="Value 3"><br>
+  <input type="number" id="value4" placeholder="Value 4"><br>
+  <input type="number" id="value5" placeholder="Value 5"><br>
+  <input type="number" id="value6" placeholder="Value 6"><br>
+  <input type="number" id="value7" placeholder="Value 7"><br>
+  <input type="number" id="value8" placeholder="Value 8"><br>
+
+<div>  Score: 1–1.5 points: very low sustainability performance<br>
+      Score: 1.5–2.5 points: low sustainability performance<br>
+      Score: 2.5–3.5 points: moderate sustainability performance<br>
+      Score: 3.5–4.5 points: high sustainability performance<br>
+       Score: 4.5–5 points: very high sustainability performance<br>
+</div>
+
+        <!-- Add more indicators here -->
+      </table>
+    </form>
+  </div>
+  
+  <script>
+    function showIndicators() {
+      var optionDropdown = document.getElementById("optionDropdown");
+      var indicatorForm = document.getElementById("indicatorForm");
+      
+      if (optionDropdown.value !== "") {
+        indicatorForm.style.display = "block";
+      } else {
+        indicatorForm.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+
+<button onclick="calculateAverage()">Performance Score</button>
+  
+<p id="averageResult" style="display: none;"></p>
+
+<script>
+  function calculateAverage() {
+    var variableADropdown = document.getElementById("rating1");
+    var variableBDropdown = document.getElementById("rating2");
+    var variableCDropdown = document.getElementById("rating3");
+    var variableDDropdown = document.getElementById("rating4");
+    var variableEDropdown = document.getElementById("rating5");
+    var variableFDropdown = document.getElementById("rating6");
+    var variableGDropdown = document.getElementById("rating7");
+    var variableHDropdown = document.getElementById("rating8");
+    var variableIDropdown = document.getElementById("rating9");
+    var variableJDropdown = document.getElementById("rating10");
+    var variableKDropdown = document.getElementById("rating11");
+    var variableLDropdown = document.getElementById("rating12");
+    var variableMDropdown = document.getElementById("rating13");
+    var variableNDropdown = document.getElementById("rating14");
+    var variableODropdown = document.getElementById("rating15");
+    var variablePDropdown = document.getElementById("rating16");
+    var variableQDropdown = document.getElementById("rating17");
+    var variableRDropdown = document.getElementById("rating18");
+    var variableSDropdown = document.getElementById("rating19");
+
+      var value1 = parseFloat(document.getElementById("value1").value);
+      var value2 = parseFloat(document.getElementById("value2").value);
+      var value3 = parseFloat(document.getElementById("value3").value);
+      var value4 = parseFloat(document.getElementById("value4").value);
+      var value5 = parseFloat(document.getElementById("value5").value);
+      var value6 = parseFloat(document.getElementById("value6").value);
+      var value7 = parseFloat(document.getElementById("value7").value);
+      var value8 = parseFloat(document.getElementById("value8").value);
+      
+    
+    
+    var r1 = parseInt(rating1.value);
+    var r2 = parseInt(rating2.value);
+     
+    var r3 = parseInt(rating3.value);
+    var r4 = parseInt(rating4.value); 
+    var r5 = parseInt(rating5.value);
+    
+    var r6 = parseInt(rating6.value); 
+    var r7 = parseInt(rating7.value);
+    var r8 = parseInt(rating8.value); 
+    var r9 = parseInt(rating9.value);
+    
+    var r10 = parseInt(rating10.value);
+    var r11 = parseInt(rating11.value);
+    
+    var r12 = parseInt(rating12.value);
+    var r13 = parseInt(rating13.value);
+    
+    var r14 = parseInt(rating14.value);
+     
+    var r15 = parseInt(rating15.value);
+    var r16 = parseInt(rating16.value); 
+    var r17 = parseInt(rating17.value);
+   
+    var r18 = parseInt(rating18.value);
+    var r19 = parseInt(rating19.value);
+     
+   
+    
+    var average1 = (r1 + r2) / 2;
+    var average2 = (r3 + r4 + r5) / 3;
+    var average3 = (r6+r7+r8+r9) / 4;
+    var average4 = (r10 + r11) / 2;
+    var average5 = (r12 + r13) / 2;
+    var average6 = r14;
+    var average7 = (r17+r15+r16) / 3;
+    var average8 = (r18 + r19) / 2;
+
+    var average9 = ( (average1*value1) +(average2*value2)+ (average3*value3)+ (average4*value4)+ (average5*value5)+ (average6*value6)+ (average7*value7)+ (average8*value8) )/ 8;
+    
+    var averageResult = document.getElementById("averageResult");
+    averageResult.textContent = "Performance Index " + average9.toFixed(2);
+    averageResult.style.display = "block";
+ 
+  }
+</script>
+
+</body>
+</html>
